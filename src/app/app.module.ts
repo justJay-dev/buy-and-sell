@@ -17,6 +17,9 @@ import { EditListingPageComponent } from './edit-listing-page/edit-listing-page.
 import { ListingDataFormComponent } from './listing-data-form/listing-data-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { fromEventPattern } from 'rxjs';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +32,9 @@ import { fromEventPattern } from 'rxjs';
         EditListingPageComponent,
         ListingDataFormComponent,
         NavBarComponent,
+        RegisterComponent,
+        LoginComponent,
+        IndexComponent,
     ],
     imports: [
         BrowserModule,

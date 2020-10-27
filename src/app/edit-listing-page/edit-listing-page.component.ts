@@ -11,7 +11,7 @@ export class EditListingPageComponent implements OnInit {
     listing: Listing;
     constructor(
         private route: ActivatedRoute,
-        private router: Router, 
+        private router: Router,
         private listingsService: ListingsService,
     ) { }
 
@@ -22,8 +22,8 @@ export class EditListingPageComponent implements OnInit {
     }
     onSubmit({ name, description, price }): void {
         this.listingsService.editListing(this.listing.id, name, description, price)
-        .subscribe(() => {
-            this.router.navigateByUrl('/my-listings');
-        })
+            .subscribe(() => {
+                this.router.navigateByUrl('/my-listings');
+            })
     }
 }

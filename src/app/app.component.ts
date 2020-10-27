@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth'
-import { auth } from 'firebase/app'
+import { AuthService } from './auth/auth.service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,13 +9,8 @@ export class AppComponent {
   title = 'buy-and-sell';
 
   constructor(
-    public auth: AngularFireAuth,
-  ) {}
-  signInClicked(): void {
-    this.auth.signInWithPopup(new auth.GoogleAuthProvider)
-  }
 
-  signOutClicked(): void {
-    this.auth.signOut();
-  }
+  ) { }
+
+
 }

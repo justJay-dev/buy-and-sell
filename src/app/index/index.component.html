@@ -1,0 +1,19 @@
+<div *ngIf="!isRegisterRoute()" class="container">
+    <div class="" *ngIf='authService.auth.user | async'>
+        <app-nav-bar></app-nav-bar>
+        <div id="content-wrap">
+            <router-outlet></router-outlet>
+        </div>
+        <button class='btn btn-secondary' (click)='authService.signOutClicked()'>Sign Out</button>
+    </div>
+
+    <div class='' *ngIf='!(authService.auth.user | async)'>
+        <h3>Login Required!</h3>
+        <app-login></app-login>
+    </div>
+
+</div>
+
+<div *ngIf="isRegisterRoute()" class='container'>
+    <app-register></app-register>
+</div>
